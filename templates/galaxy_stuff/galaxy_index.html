@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 
+{% block title %}Galaxy Page{% endblock %}
+
 {% block page_content %}
-  <head>
+
     <link rel="stylesheet" href="/static/css/base.css" />
     <meta property="og:title" content="CSS Galaxies" />
     <meta property="og:description" content="css & html galaxy animation example" />
     <meta property="og:url" content="https://reminelson.github.io/galaxy-css/index" />
     <meta property="og:image" content="http://reminelson.github.io/galaxy-css/screenshot.png" />
-  </head>
+
+<div>
   <body>
     <div class="gradient-container">
       <div class="effect-wrapper">
@@ -67,4 +70,5 @@
       </div>
     </div>
   </body>
+</div>
 {% endblock %}
