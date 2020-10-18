@@ -1,0 +1,149 @@
+body {
+  background-color: black;
+}
+
+.gradient-container {
+  position: absolute;
+  background:radial-gradient(circle, rgba(255,0,239,.3), rgba(255,0,239,0));
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-fit: stretch;
+  top: 0;
+}
+
+.effect-wrapper {  
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+  position:fixed;
+  top: -50%;
+  width:100vw;
+  height:100vw;
+}
+
+/*.flowers { 
+  background: repeat 50vw 10vw url('flowers.svg');
+  min-height: 100vh;
+  min-width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}*/
+
+.effect-wrapper .layer1,
+.effect-wrapper .layer2 {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+}
+
+.effect-wrapper .layer1,
+.effect-wrapper .layer1 * {
+    background: url('stars.svg');
+    object-fit: stretch;
+    top: -10%;
+    left: -20%;
+}
+
+.effect-wrapper .layer2,
+.effect-wrapper .layer2 * {
+    background-image: url('stars.svg');
+    object-fit: stretch;
+    top: 5%;
+    left: 20%;
+} 
+
+.effect-wrapper .layer1 *,
+.effect-wrapper .layer2 * {
+    display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+    width:80%;
+    height:80%;
+} 
+
+
+
+
+/* --------- Animation --------- */
+.effect-wrapper .layer1,
+.effect-wrapper .layer1 * {
+    -webkit-animation-name: spin-clockwise;
+    -webkit-animation-duration: 50s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.82, 0.24, 0.25, 0.75);
+    /*-webkit-box-shadow:inset 0 0 10px rgba(255,255,255,0.3);*/
+}
+
+.gradient-container {
+  -webkit-animation-name: pulsate-pink;
+  -webkit-animation-duration: 50s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.82, 0.24, 0.25, 0.75);
+}
+.effect-wrapper .layer2,
+.effect-wrapper .layer2 * {
+    -webkit-animation-name: spin-counter-clockwise;
+    -webkit-animation-duration: 50s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.82, 0.24, 0.25, 0.75);
+    /*-webkit-box-shadow:inset 0 0 10px rgba(255,255,255,0.3);*/
+}
+
+
+
+
+/* Animation: Clockwise */
+@-webkit-keyframes spin-clockwise {
+    0%   { -webkit-transform: rotate(0deg);   }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+/* Animation: Counter counter clockwise */
+@-webkit-keyframes spin-counter-clockwise {
+    0%   { -webkit-transform: rotate(0deg);   } 
+    100% { -webkit-transform: rotate(-360deg); }
+}
+
+
+
+/* Animation: Counter counter clockwise */
+@-webkit-keyframes pulsate-pink {
+    0%   { background:radial-gradient(circle, rgba(7,164,255,.3), rgba(7,164,255,0));
+           -webkit-transform:/* Add Cool stuff here! */; 
+    } 
+    100% { background:radial-gradient(circle, rgba(255,0,239,.3), rgba(255,0,239,0));
+           -webkit-transform:/* Add Cool stuff here! */; 
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+  .effect-wrapper {
+    height: 100vh;
+    width: 100vh;
+  }
+
+  .effect-wrapper .layer1,
+  .effect-wrapper .layer1 * {
+      background: url('stars.svg');
+      object-fit: stretch;
+      top: 70vh;
+      left: -40vw;
+  }
+
+  .effect-wrapper .layer2,
+  .effect-wrapper .layer2 * {
+      background-image: url('stars.svg');
+      object-fit: stretch;
+      top: 30vh;
+      left: 0;
+  } 
+
+}
+    
