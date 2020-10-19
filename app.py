@@ -9,7 +9,6 @@ bootstrap = Bootstrap(app)
 def page_not_found(e):
     return render_template('404.html'), 404
 
-
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template('500.html'), 500
@@ -18,15 +17,21 @@ def internal_server_error(e):
 def index():
     return render_template('index.html')
 
-@app.route('/user/<name>')
-def user(name):
-	    return render_template('user.html', name=name)
+@app.route('/calendar')
+def calendar():
+	return render_template('calendar.html')
+
+@app.route('/gallery')
+def gallery():
+	return render_template('photo_gallery.html')
 
 @app.route('/galaxy_stuff')
 def galaxy_stuff():
-	# return render_tamplate('')
 	return render_template('/galaxy_stuff/galaxy_index.html')
 
+@app.route('/user/<name>')
+def user(name):
+	    return render_template('user.html', name=name)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
