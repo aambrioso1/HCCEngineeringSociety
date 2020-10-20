@@ -1,6 +1,6 @@
-# HCCEngineeringSociety Website:  https://hccengineeringsociety.club/
+# HCCEngineeringSociety Website
 
-The Engineering Society is a club at the Brandon campus of Hillsborough Community College (https://www.hccfl.edu/campus-life/brandon-campus) in Tampa, Florida.  This repository contains files for the HCC Engineering Society's web site.    
+The Engineering Society is a club at the Brandon campus of Hillsborough Community College (www.hccfl.edu/campus-life/brandon-campus) in Tampa, Florida.  This repository contains files for the HCC Engineering Society's web site:  https://hccengineeringsociety.club/    
 
 The club sponsors a programming workshop that meets on Discord (https://discord.com/invite/RjquZWX).   In Discord, look for the programming channel.   We meet from 9:30 am to 10:30 on most Fridays.   But feel free to chat with us on our channel any time.
 
