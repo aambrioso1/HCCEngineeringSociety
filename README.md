@@ -8,7 +8,7 @@ The club sponsors a programming workshop that meets on Discord (https://discord.
 
 Currently the website is in a developmental stage.   It is running on a virtual Linux machine hosted by Digital Ocean.  The site uses the Flask web application framework (https://flask.palletsprojects.co).  It uses WSGI (https://wsgi.readthedocs.io/en/latest/index.html) to communicate to an NGINX (www.fullstackpython.com/nginx.html) webserver.
 
-The plan is to gradually build up the website while learning Python, git, HTML, CSS, linux commands, Flask, Python, and Jinja.  We will coordinate our efforts with a workflow using git and GitHub.   
+The plan is to gradually build up the website while learning Python, git, HTML, CSS, linux commands, Flask, and Jinja.  We will coordinate our efforts with a workflow using git and GitHub.   
 
 Right now we we need help with the following:
 (1)  The home page.
@@ -19,4 +19,4 @@ Right now we we need help with the following:
 
 Thank you to HCC's Brandon Campus Student Government Association for sponsoring our club!!! 
 
-(Updated: 10/20/2020)
+(Updated: 10/21/2020)
