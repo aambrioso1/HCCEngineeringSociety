@@ -33,5 +33,9 @@ def galaxy_stuff():
 def user(name):
 	    return render_template('user.html', name=name)
 
+@app.route('/discord')
+def discordInfoPage():
+	return render_template('DiscordInfoPage.html')
+
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
