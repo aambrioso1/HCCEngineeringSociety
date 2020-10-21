@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}HCC Engineering{% endblock %}</title>
+    <title>{% block title %}HCC Engineering Discord Info{% endblock %}</title>
 </head>
+
+{% block page_content %}
 <body>
-<p>Hello Internet</p>
 <div class="container">
     <p>Most Engineering Society meetings are held on our Discord Server</p>
     <p>Feel free to join us with the following link</p>
@@ -14,4 +16,5 @@
     <a href="https://https://www.youtube.com/" target="_blank">https://www.youtube.com/</a>
 </div>
 </body>
+{% endblock %}
 </html>
