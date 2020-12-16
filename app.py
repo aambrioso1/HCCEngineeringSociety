@@ -1,8 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from flask_bootstrap import Bootstrap
+from datetime import datetime, timedelta
+from flask_moment import Moment
 
 app = Flask(__name__)
-
+moment = Moment(app)
 bootstrap = Bootstrap(app)
 
 @app.errorhandler(404)
@@ -19,7 +21,20 @@ def index():
 
 @app.route('/calendar')
 def calendar():
-	return render_template('calendar.html')
+    now = datetime.utcnow()
+    midnight = datetime(now.year, now.month, now.day, 0, 0, 0)
+    epoch = datetime(1970, 1, 1, 0, 0, 0)
+    next_saturday = now + timedelta(5 - now.weekday())
+    return render_template('calendar.html', now=now, midnight=midnight,
+                           epoch=epoch, next_saturday=next_saturday)
+	# Only this line appears in original code for the /calendar route
+	# return render_template('calendar.html')
+
+@app.route('/ajax')
+def ajax():
+    return jsonify({'timestamp': moment.create(datetime.utcnow()).format(
+        'LLLL')})
+
 
 @app.route('/gallery')
 def gallery():
