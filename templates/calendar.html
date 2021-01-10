@@ -2,46 +2,46 @@
 
 {% block title %}Calendar{% endblock %}
 
-
-
 {% block page_content %}
- <! -- Original Code Just had a heading here (11/4/2020) --> 
+    <head>
+    	<title>Tentative Calendar of Events!</title>
+    </head>
 
-<head>
-	<title>Calendar of Events!</title>
-    {{ moment.include_jquery() }}
-    {{ moment.include_moment() }}
-    <script>
-    function load_ajax_timestamp() {
-        $.ajax({
-            url: '{{ url_for('ajax') }}',
-            dataType: 'json'
-        }).done(function(response) {
-            $('#ajax').append('<p>' + response.timestamp + '</p>');
-            flask_moment_render_all();
-        });
-    }
-    </script>
-</head>
+    <h3>January</h3>
+    <ul>
+        <li>1/9:  Electrathon Race @ Wharton High School</li>
+        <li>1/16:  Rocketry @ TTRA</li>
+        <li>TBD: Club Rush</li>
+    </ul>
 
-<p>The current date and time is: {{ moment().format('MMMM Do YYYY, h:mm:ss a') }}.</p>
-<p>
-    {{ moment(midnight).fromTime(now) }} it was midnight in the UTC timezone. 
-    That was {{ moment(midnight).calendar() }} in your local time.
-    It will be midnight again {{ moment(midnight).toNow() }}.
-</p>
-<p>
-    Unix epoch is {{ moment(epoch, local=True).format('LLLL') }} in the UTC timezone.
-    That was {{ moment(epoch).format('LLLL') }} in your local time.
-</p>
-<p>
-    This page was rendered on {{ moment(now).format('LLL') }},
-    which was {{ moment(now).fromNow(refresh = True) }}.
-</p>
-<p>
-    The next Saturday will be in {{ moment(now).toTime(next_saturday) }}, from the time this page was rendered.
-</p>
-<div id="ajax"></div>
-<a href="#" onclick="load_ajax_timestamp()">Load Ajax timestamp</a>
+    <h3>February</h3>
+        <ul>
+            <li>2/19:  2021 USF Engineering Expo (Virtual Only)</li>
+            <li>2/20:  Electrathon Race @ TBD</li>
+        </ul>
 
+    <h3>March</h3>
+        <ul>
+            <li>3/6:  Electrathon Race @ Brandon High School (Dash Race)</li>
+            <li>TBD:  Rocketry @ TTRA</li>
+        </ul>
+
+    <h3>April</h3>
+        <ul>
+            <li>4/1:  Electrathon Race @ Mulberry High School</li>
+            <li>TBD:  Rocketry @ TTRA</li>
+            <li>TBD:  Academic Excellence Awards</li>
+            <li>TBD:  Astronomy Day @ FARROUT Observatory</li>
+        </ul>
+
+    <h3>May</h3>
+        <ul>
+            <li>TBD:  Rocketry @ TTRA</li>
+            <li>TBD:  End of Year Banquet for ES</li>
+        </ul>
+
+    <h3>June</h3>
+        <ul>
+            <li>6/30 Budget Due to SGA - All left over funds return to SGA</li>
+        </ul>
 {% endblock %}
