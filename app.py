@@ -21,19 +21,7 @@ def index():
 
 @app.route('/calendar')
 def calendar():
-    now = datetime.utcnow()
-    midnight = datetime(now.year, now.month, now.day, 0, 0, 0)
-    epoch = datetime(1970, 1, 1, 0, 0, 0)
-    next_saturday = now + timedelta(5 - now.weekday())
-    return render_template('calendar.html', now=now, midnight=midnight,
-                           epoch=epoch, next_saturday=next_saturday)
-	# Only this line appears in original code for the /calendar route
-	# return render_template('calendar.html')
-
-@app.route('/ajax')
-def ajax():
-    return jsonify({'timestamp': moment.create(datetime.utcnow()).format(
-        'LLLL')})
+	return render_template('calendar.html')
 
 
 @app.route('/gallery')
@@ -44,7 +32,7 @@ def gallery():
 def galaxy_stuff():
 	return render_template('/galaxy_stuff/galaxy_index.html')
 
-@app.route('/user/<name>')
+@app.route('/admin/<name>')
 def user(name):
 	    return render_template('user.html', name=name)
 
