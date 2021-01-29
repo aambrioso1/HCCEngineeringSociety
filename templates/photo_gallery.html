@@ -3,7 +3,12 @@
 {% block title %}Photo Gallery{% endblock %}
 
 {% block page_content %}
-  <div>
-    <h1>Photo Gallery</h1>
-  </div>
+  	
+  	<div class="container">	
+    	<h1>Photo Gallery</h1>
+  
+  		<img src="{{ url_for('static', filename='img/Electrathon_Race_1_9_21.jpg') }}" width=200 />
+  		<img src="{{ url_for('static', filename='img/Rocketry_11_21_2020.jpg') }}" width=200 />
+	</div>
+
 {% endblock %}
