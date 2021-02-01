@@ -6,9 +6,38 @@
   	
   	<div class="container">	
     	<h1>Photo Gallery</h1>
-  
-  		<img src="{{ url_for('static', filename='img/Electrathon_Race_1_9_21.jpg') }}" width=200 />
-  		<img src="{{ url_for('static', filename='img/Rocketry_11_21_2020.jpg') }}" width=200 />
+  		
+  		<div class="container">
+  			<h1>Electrathon</h1>
+  			<img src="{{ url_for('static', filename='img/Electrathon_Race_1_9_21.jpg') }}" width=200 />
+  			<img src="{{ url_for('static', filename='img/Electrathon_2.jpg') }}" width=200 />
+  			<img src="{{ url_for('static', filename='img/Electrathon_3.jpg') }}" width=200 />
+  		</div>
+  		
+  		<div class="container">
+  			<h1>Rocketry</h1>
+  			<img src="{{ url_for('static', filename='img/Rocketry_11_21_2020.jpg') }}" width=200 />
+  		</div>
+
+  		<div class="container">
+  			<h1>USF Engineering Expo</h1>
+  			<img src="{{ url_for('static', filename='img/USF_Eng_Expo_1.jpg') }}" width=200 />
+  			<img src="{{ url_for('static', filename='img/USF_Eng_Expo_2.jpg') }}" width=200 />
+  			<img src="{{ url_for('static', filename='img/USF_Eng_Expo_3.jpg') }}" width=200 />
+  		</div>
+
+  		<div class="container">
+  			<h1>Astronomy</h1>
+  			<img src="{{ url_for('static', filename='img/Astronomy.jpg') }}" width=200 />
+  		</div>
+  		
+  		<div class="container">
+  			<h1>Other Events</h1>
+  			<img src="{{ url_for('static', filename='img/Author_Visit.jpg') }}" width=200 />
+  			<img src="{{ url_for('static', filename='img/NASA_Trip.jpg') }}" width=200 />
+  			<img src="{{ url_for('static', filename='img/SGA_Bash.jpg') }}" width=200 />
+  		</div>
+
 	</div>
 
 {% endblock %}
