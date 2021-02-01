@@ -65,7 +65,7 @@ def user(name):
 @app.route('/discord')
 def discordInfoPage():
 	return render_template('DiscordInfoPage.html')
-
+"""
 @app.route('/admin/upload')
 def upload():
     return render_template('upload.html')
@@ -78,6 +78,8 @@ def upload_file():
     if uploaded_file.filename != '':
         uploaded_file.save(uploaded_file.filename)
     return redirect(url_for('upload'))
+"""
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
